@@ -37,5 +37,10 @@ def send_message():
 
     return jsonify({"message": "Messages sent successfully"}), 200
 
+# Root endpoint to display a hello message
+@app.route('/')
+def hello():
+    return 'Hello! Welcome to the Twilio Messaging Service.', 200
+
 if __name__ == '__main__':
     app.run(debug=True)
